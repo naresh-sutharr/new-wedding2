@@ -600,35 +600,155 @@
 }
 
 /* ========================================================
-   8. CREATOR CREDIT BAR (Built by Naresh)
+   8. CREATOR & TEAM CREDIT BAR (Naresh & Ajit Rajput)
    ======================================================== */
+#rec2684633503 .tn-elem[data-elem-id="1785086042369000001"] {
+  display: none !important;
+}
+
+.t-popup:not(.t-popup_show) {
+  display: none !important;
+}
+
 .wedding-creator-bar {
   width: 100%;
-  background-color: #fdf4eb;
-  padding: 24px 15px 35px;
-  text-align: center;
-  border-top: 1px solid rgba(207, 171, 102, 0.25);
+  background: #fdf4eb;
+  padding: 24px 16px 36px;
   box-sizing: border-box;
+  border-top: 1px solid rgba(216, 174, 104, 0.35);
+  position: relative;
+  z-index: 10;
+  text-align: center;
 }
 
 .wedding-creator-bar .creator-container {
-  display: inline-block;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.creator-credits-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.creator-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.creator-role-tag {
   font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 11px;
+  letter-spacing: 2.2px;
   text-transform: uppercase;
+  color: #9c8152;
+  font-weight: 600;
+}
+
+.creator-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 22px;
+  background: rgba(207, 171, 102, 0.12);
+  border: 1px solid rgba(190, 150, 103, 0.35);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.creator-link:hover {
+  background: rgba(207, 171, 102, 0.22);
+  border-color: rgba(190, 150, 103, 0.7);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 10px rgba(125, 99, 50, 0.15);
+}
+
+.creator-link .creator-icon {
+  color: #a68547;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.creator-link:hover .creator-icon {
+  color: #70582d;
+  transform: scale(1.12);
+}
+
+.creator-name {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #5c421b;
+}
+
+.creator-handle {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
   color: #806b43;
 }
 
-.wedding-creator-bar .creator-container strong {
-  color: #5c421b;
-  font-weight: 700;
-  letter-spacing: 2.5px;
+.creator-contact-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.wedding-creator-bar .heart-icon {
-  color: #c94a4a;
+.creator-name-plain {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #5c421b;
+}
+
+.creator-phone {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #806b43;
+}
+
+.creator-sep {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d8ae68;
+}
+
+.creator-sep-line {
   display: inline-block;
-  margin: 0 4px;
-  animation: heartPulse 1.8s ease-in-out infinite;
+  width: 28px;
+  height: 1px;
+  background: rgba(216, 174, 104, 0.45);
+}
+
+.creator-sep-gem {
+  font-size: 11px;
+  color: #a68547;
+}
+
+@media screen and (max-width: 600px) {
+  .creator-credits-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .creator-sep {
+    width: 60%;
+    justify-content: center;
+  }
+  .creator-sep-line {
+    flex: 1;
+  }
 }
