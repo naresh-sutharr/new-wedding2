@@ -572,3 +572,63 @@
   font-weight: 600;
   font-family: Arial, sans-serif;
 }
+
+.footer-credit {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a68547;
+  margin-top: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer-credit .heart-icon {
+  color: #c94a4a;
+  font-size: 12px;
+  display: inline-block;
+  animation: heartPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* ========================================================
+   8. CREATOR CREDIT BAR (Built by Naresh)
+   ======================================================== */
+.wedding-creator-bar {
+  width: 100%;
+  background-color: #fdf4eb;
+  padding: 24px 15px 35px;
+  text-align: center;
+  border-top: 1px solid rgba(207, 171, 102, 0.25);
+  box-sizing: border-box;
+}
+
+.wedding-creator-bar .creator-container {
+  display: inline-block;
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #806b43;
+}
+
+.wedding-creator-bar .creator-container strong {
+  color: #5c421b;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.wedding-creator-bar .heart-icon {
+  color: #c94a4a;
+  display: inline-block;
+  margin: 0 4px;
+  animation: heartPulse 1.8s ease-in-out infinite;
+}
