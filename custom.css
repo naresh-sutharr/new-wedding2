@@ -1,0 +1,574 @@
+/* ========================================================
+   CUSTOM LUXURY STYLING — SAQUIB SIDDIQUI & FOZIYA PARVEEN
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Rufina:wght@400;700&display=swap');
+
+/* ========================================================
+   1. ENVELOPE OPENING VIDEO (NO STATIC PHOTO OVERLAY)
+   Fixes: Static photo removed, video is directly visible and scaled
+   to full luxury size without being small/tiny
+   ======================================================== */
+#weiOverlay {
+  display: none !important;
+}
+
+#weiVideoWrap {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 100000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #F9F0E0 !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
+  transition: opacity 1.2s ease !important;
+}
+
+#weiVideoWrap.wei-video-out {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.video-frame-container {
+  position: relative !important;
+  width: min(100vw, calc(100vh * 0.5625)) !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  max-height: 100vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+
+#weiVideo {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  transform: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .video-frame-container {
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    max-height: 100vh !important;
+  }
+  #weiVideo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/* ========================================================
+   2. HERO TITLE CARD OVER VIDEO (rec2684632103)
+   Fixes: NO white box, natural luxury cursive strokes, elegant gold glow
+   ======================================================== */
+.hero-title-clean {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hero-welcome {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #5c421b;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.8);
+  margin-bottom: 3px;
+}
+
+.hero-ceremony {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+  font-size: 46px;
+  line-height: 1.1;
+  color: #63471c;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.9), 0 1px 3px rgba(80, 55, 20, 0.35);
+  margin-bottom: 4px;
+}
+
+.hero-div-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 180px;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.hero-div-line {
+  flex: 1;
+  height: 1px;
+  background: #8a6528;
+  opacity: 0.75;
+}
+
+.hero-div-of {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 600;
+  color: #5c421b;
+  padding: 0 4px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.hero-names {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-groom,
+.hero-bride {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+  font-size: 48px;
+  line-height: 1.15;
+  color: #523610;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.9), 0 1px 3px rgba(80, 55, 20, 0.35);
+}
+
+.hero-amp {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+  font-size: 34px;
+  line-height: 0.85;
+  color: #7d5a22;
+  font-weight: 400;
+  margin: 1px 0;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 479px) {
+  .hero-welcome {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .hero-ceremony {
+    font-size: 40px;
+  }
+
+  .hero-groom,
+  .hero-bride {
+    font-size: 42px;
+  }
+
+  .hero-amp {
+    font-size: 30px;
+  }
+}
+
+/* ========================================================
+   3. MAIN INVITATION CARD (rec2684632503)
+   Fixes: Keep arch invitation text strictly inside border,
+   prevent line overflow past the pillars
+   ======================================================== */
+#rec2684632503 .tn-elem[data-elem-id="1782990313526000001"] {
+  width: 250px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+}
+
+#rec2684632503 .tn-elem[data-elem-id="1782990313526000001"] .tn-atom {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif !important;
+  font-size: 10px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  color: #806b43 !important;
+  font-weight: 600 !important;
+  white-space: normal !important;
+}
+
+#rec2684632503 .tn-elem[data-elem-id="1782990372985000002"],
+#rec2684632503 .tn-elem[data-elem-id="1782990570479000010"] {
+  width: 320px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+}
+
+#rec2684632503 .tn-elem[data-elem-id="1782990372985000002"] .tn-atom,
+#rec2684632503 .tn-elem[data-elem-id="1782990570479000010"] .tn-atom {
+  white-space: nowrap !important;
+  font-size: 34px !important;
+  text-align: center !important;
+}
+
+.card-name-clean {
+  font-family: 'Alex Brush', 'Great Vibes', 'Rufina', cursive !important;
+  font-size: 34px !important;
+  line-height: 1.1 !important;
+  color: #806b43 !important;
+  font-weight: 400 !important;
+  white-space: nowrap !important;
+  display: inline-block;
+}
+
+#rec2684632503 .tn-elem[data-elem-id="1782990549039000006"] {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+}
+
+#rec2684632503 .tn-elem[data-elem-id="1782990549039000006"] .tn-atom {
+  font-family: 'Alex Brush', 'Great Vibes', cursive !important;
+  font-size: 28px !important;
+  color: #806b43 !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+}
+
+#rec2684632503 .tn-elem[data-elem-id="1782990453976000005"],
+#rec2684632503 .tn-elem[data-elem-id="1782990570479000008"] {
+  width: 300px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  text-align: center !important;
+}
+
+#rec2684632503 .tn-elem[data-elem-id="1782990453976000005"] .tn-atom,
+#rec2684632503 .tn-elem[data-elem-id="1782990570479000008"] .tn-atom {
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.8px !important;
+  text-align: center !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2684632503 .tn-elem[data-elem-id="1782990313526000001"] {
+    width: 230px !important;
+  }
+
+  #rec2684632503 .tn-elem[data-elem-id="1782990372985000002"],
+  #rec2684632503 .tn-elem[data-elem-id="1782990570479000010"] {
+    width: 280px !important;
+  }
+
+  .card-name-clean {
+    font-size: 30px !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #rec2684632503 .tn-elem[data-elem-id="1782990313526000001"] {
+    width: 220px !important;
+    font-size: 9.5px !important;
+  }
+
+  #rec2684632503 .tn-elem[data-elem-id="1782990372985000002"],
+  #rec2684632503 .tn-elem[data-elem-id="1782990570479000010"] {
+    width: 260px !important;
+  }
+
+  .card-name-clean {
+    font-size: 26px !important;
+  }
+}
+
+/* ========================================================
+   4. TIMELINE (rec2684632703)
+   Fixes: Elimination of 'PM' line wrap and overlap with titles
+   ======================================================== */
+#rec2684632703 .tn-elem[data-elem-id="1784904130456000003"],
+#rec2684632703 .tn-elem[data-elem-id="1784904174025000001"],
+#rec2684632703 .tn-elem[data-elem-id="1784904205907000003"],
+#rec2684632703 .tn-elem[data-elem-id="1784904207522000005"],
+#rec2684632703 .tn-elem[data-elem-id="1784904209471000007"] {
+  width: 170px !important;
+  z-index: 4 !important;
+}
+
+#rec2684632703 .tn-elem[data-elem-id="1784904130456000003"] .tn-atom,
+#rec2684632703 .tn-elem[data-elem-id="1784904174025000001"] .tn-atom,
+#rec2684632703 .tn-elem[data-elem-id="1784904205907000003"] .tn-atom,
+#rec2684632703 .tn-elem[data-elem-id="1784904207522000005"] .tn-atom,
+#rec2684632703 .tn-elem[data-elem-id="1784904209471000007"] .tn-atom {
+  white-space: nowrap !important;
+  font-size: 24px !important;
+  line-height: 1.2 !important;
+}
+
+.tl-time {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px !important;
+  font-style: italic;
+  color: #806b43 !important;
+  white-space: nowrap !important;
+  display: block;
+}
+
+.tl-title {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #70582d !important;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.tl-date {
+  font-family: Arial, sans-serif;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #a68547 !important;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.tl-sub {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  color: #9c8152 !important;
+  display: block;
+  margin-top: 2px;
+  line-height: 1.35 !important;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+/* ========================================================
+   5. LOCATION CARD (rec2684632903)
+   ======================================================== */
+.loc-title-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #806b43;
+  user-select: none;
+}
+
+.loc-script {
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
+  font-size: 48px;
+  line-height: 1.1;
+  color: #806b43;
+  margin-bottom: 2px;
+}
+
+.loc-div-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 180px;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.loc-div-line {
+  flex: 1;
+  height: 1px;
+  background: #a68547;
+  opacity: 0.7;
+}
+
+.loc-flourish {
+  font-size: 10px;
+  color: #a68547;
+}
+
+.loc-city {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  color: #806b43;
+  margin-bottom: 4px;
+}
+
+.loc-venue {
+  font-family: 'Playfair Display', 'Rufina', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #70582d;
+  margin-bottom: 4px;
+}
+
+.loc-detail {
+  font-family: 'Playfair Display', 'Rufina', Georgia, serif;
+  font-size: 14px;
+  color: #806b43;
+  line-height: 1.3;
+}
+
+/* ========================================================
+   6. WITH WARM REGARDS & FIRM CARD (rec2684633203)
+   ======================================================== */
+#rec2684633203 .tn-elem[data-elem-id="1785747526578"] {
+  display: none !important;
+}
+
+#rec2684633203 .tn-elem[data-elem-id="1785227556011000002"] {
+  top: 205px !important;
+}
+
+@media screen and (max-width: 1199px) {
+  #rec2684633203 .tn-elem[data-elem-id="1785227556011000002"] {
+    top: 205px !important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  #rec2684633203 .tn-elem[data-elem-id="1785227556011000002"] {
+    top: 205px !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  #rec2684633203 .tn-elem[data-elem-id="1785227556011000002"] {
+    top: 205px !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #rec2684633203 .tn-elem[data-elem-id="1785227556011000002"] {
+    top: 205px !important;
+  }
+}
+
+.warm-regards-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10px;
+  font-family: 'Rufina', Georgia, serif;
+}
+
+.host-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #70582d;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.host-address {
+  font-size: 12px;
+  color: #806b43;
+  line-height: 1.45;
+  margin-bottom: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.host-phone {
+  font-size: 13px;
+  color: #a68547;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.host-phone-label {
+  font-size: 11px;
+  display: block;
+  margin-bottom: 2px;
+  letter-spacing: 1px;
+  color: #9c8152;
+}
+
+.host-phone a {
+  color: #a68547;
+  text-decoration: none;
+  border-bottom: 1px dotted #a68547;
+}
+
+.firm-box {
+  border-top: 1px solid rgba(216, 174, 104, 0.5);
+  padding-top: 8px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.firm-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #9c8152;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-family: Arial, sans-serif;
+}
+
+.firm-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #70582d;
+  letter-spacing: 0.5px;
+}
+
+.firm-sub {
+  font-size: 12px;
+  color: #806b43;
+  margin-top: 2px;
+}
+
+/* ========================================================
+   7. FOOTER (rec2684633503)
+   ======================================================== */
+.footer-names-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Cinzel', Georgia, serif;
+  color: #806b43;
+}
+
+.footer-couple {
+  font-size: 16px;
+  font-weight: 700;
+  color: #70582d;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.footer-regards {
+  font-size: 12px;
+  color: #806b43;
+  margin-bottom: 3px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-firm {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #9c8152;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+}
