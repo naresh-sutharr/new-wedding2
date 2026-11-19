@@ -613,16 +613,16 @@
 .wedding-creator-bar {
   width: 100%;
   background: #fdf4eb;
-  padding: 24px 16px 36px;
+  padding: 12px 14px 18px;
   box-sizing: border-box;
-  border-top: 1px solid rgba(216, 174, 104, 0.35);
+  border-top: 1px solid rgba(216, 174, 104, 0.25);
   position: relative;
   z-index: 10;
   text-align: center;
 }
 
 .wedding-creator-bar .creator-container {
-  max-width: 760px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
@@ -630,125 +630,123 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 22px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .creator-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
 }
 
 .creator-role-tag {
   font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
-  font-size: 11px;
-  letter-spacing: 2.2px;
+  font-size: 9.5px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
-  color: #9c8152;
+  color: #a48c67;
   font-weight: 600;
 }
 
 .creator-link {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 5px;
   text-decoration: none;
-  padding: 6px 14px;
-  border-radius: 22px;
-  background: rgba(207, 171, 102, 0.12);
-  border: 1px solid rgba(190, 150, 103, 0.35);
-  transition: all 0.25s ease;
+  padding: 3px 9px;
+  border-radius: 14px;
+  background: rgba(207, 171, 102, 0.09);
+  border: 1px solid rgba(190, 150, 103, 0.28);
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .creator-link:hover {
-  background: rgba(207, 171, 102, 0.22);
-  border-color: rgba(190, 150, 103, 0.7);
-  transform: translateY(-1.5px);
-  box-shadow: 0 4px 10px rgba(125, 99, 50, 0.15);
+  background: rgba(207, 171, 102, 0.2);
+  border-color: rgba(190, 150, 103, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(125, 99, 50, 0.12);
 }
 
 .creator-link .creator-icon {
   color: #a68547;
   flex-shrink: 0;
-  transition: transform 0.25s ease, color 0.25s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .creator-link:hover .creator-icon {
   color: #70582d;
-  transform: scale(1.12);
 }
 
 .creator-name {
   font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
-  font-size: 14px;
+  font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.8px;
   color: #5c421b;
 }
 
 .creator-handle {
   font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  color: #806b43;
+  color: #8a734a;
 }
 
 .creator-contact-group {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 6px;
 }
 
 .creator-name-plain {
   font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
-  font-size: 14px;
+  font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.8px;
   color: #5c421b;
 }
 
 .creator-phone {
   font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #806b43;
+  letter-spacing: 0.3px;
+  color: #8a734a;
 }
 
 .creator-sep {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   color: #d8ae68;
 }
 
 .creator-sep-line {
   display: inline-block;
-  width: 28px;
+  width: 14px;
   height: 1px;
-  background: rgba(216, 174, 104, 0.45);
+  background: rgba(216, 174, 104, 0.35);
 }
 
 .creator-sep-gem {
-  font-size: 11px;
+  font-size: 8px;
   color: #a68547;
 }
 
 @media screen and (max-width: 600px) {
+  .wedding-creator-bar {
+    padding: 10px 12px 14px;
+  }
   .creator-credits-grid {
     flex-direction: column;
-    gap: 16px;
+    gap: 6px;
+  }
+  .creator-card {
+    gap: 5px;
   }
   .creator-sep {
-    width: 60%;
-    justify-content: center;
-  }
-  .creator-sep-line {
-    flex: 1;
+    display: none;
   }
 }
